@@ -73,9 +73,15 @@ export function PracticeRecommendation({
             key="empty"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="mx-auto max-w-md px-6 py-24 text-center font-display text-xl italic text-muted-foreground"
+            className="mx-auto max-w-md px-6 py-24 text-center"
           >
-            Choose a path above, and your practices will appear here.
+            <span className="rule-gold mx-auto block w-16" />
+            <span className="mt-8 block font-display text-2xl italic text-foreground">
+              Select one of the five paths above
+            </span>
+            <span className="mt-3 block text-sm text-muted-foreground">
+              Your recommended practices will appear here.
+            </span>
           </motion.p>
         )}
       </AnimatePresence>
