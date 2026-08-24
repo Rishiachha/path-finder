@@ -25,7 +25,7 @@ export function PathSelector({
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 1.2, delay: i * 0.12, ease }}
               animate={{ flexGrow: active ? 1.9 : 1 }}
-              className="group relative h-[58vh] flex-1 basis-0 cursor-pointer overflow-hidden text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-gold lg:h-full"
+              className="group relative h-[58vh] w-full shrink-0 cursor-pointer overflow-hidden text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-gold lg:h-full lg:w-auto lg:flex-1 lg:basis-0 lg:shrink"
             >
               <img
                 src={path.image}
