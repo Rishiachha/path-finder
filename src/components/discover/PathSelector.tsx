@@ -25,7 +25,7 @@ export function PathSelector({
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 1.2, delay: i * 0.12, ease }}
               animate={{ flexGrow: active ? 1.9 : 1 }}
-              className="group relative h-[58vh] flex-1 basis-0 overflow-hidden text-left lg:h-full"
+              className="group relative h-[58vh] flex-1 basis-0 cursor-pointer overflow-hidden text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-gold lg:h-full"
             >
               <img
                 src={path.image}
@@ -67,6 +67,14 @@ export function PathSelector({
                     </li>
                   ))}
                 </ul>
+                <span
+                  className={`eyebrow mt-7 inline-flex items-center gap-2 transition-colors duration-700 ${
+                    active ? "text-gold" : "text-primary-foreground/70"
+                  }`}
+                >
+                  {active ? "Selected" : "Choose this path"}
+                  <span aria-hidden>&rarr;</span>
+                </span>
               </div>
             </motion.button>
           );
