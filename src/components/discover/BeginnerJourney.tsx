@@ -39,7 +39,7 @@ export function BeginnerJourney() {
           </p>
         </div>
 
-        <div className="mt-20 grid gap-14 md:grid-cols-3">
+        <div className="mt-14 grid gap-10 md:grid-cols-3">
           {STEPS.map((s, i) => (
             <motion.article
               key={s.day}

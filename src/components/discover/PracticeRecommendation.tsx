@@ -173,7 +173,7 @@ export function PracticeRecommendation({
             key="empty"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="mx-auto max-w-md px-6 py-16 text-center"
+            className="mx-auto max-w-md px-6 py-8 text-center"
           >
             <span className="rule-gold mx-auto block w-16" />
             <span className="mt-8 block font-display text-2xl italic text-foreground">
