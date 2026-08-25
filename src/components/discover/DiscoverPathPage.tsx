@@ -28,7 +28,7 @@ export function DiscoverPathPage() {
 
       <section
         id="question"
-        className="scroll-mt-8 px-6 pt-12 pb-36 text-center sm:pt-16 sm:pb-52"
+        className="scroll-mt-8 px-6 pt-12 pb-12 text-center sm:pt-16 sm:pb-16"
       >
         <motion.div
           initial={{ opacity: 0, y: 30 }}

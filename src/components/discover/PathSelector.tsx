@@ -11,7 +11,7 @@ export function PathSelector({
   onSelect: (path: JourneyPathData) => void;
 }) {
   return (
-    <section id="paths" className="px-4 pb-24 sm:px-8">
+    <section id="paths" className="px-4 pb-12 sm:px-8">
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-4 sm:grid-cols-2">
         {PATHS.map((path, i) => {
           const active = activeId === path.id;

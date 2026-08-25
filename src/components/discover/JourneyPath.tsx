@@ -20,7 +20,7 @@ const nodes = PATHS.map((path, i) => {
 
 export function JourneyPath() {
   return (
-    <section className="px-6 py-32 sm:py-44">
+    <section className="px-6 py-24 sm:py-32">
       <div className="mx-auto max-w-3xl text-center">
         <p className="eyebrow text-accent-foreground/70">The Journey Map</p>
         <h2 className="mt-6 text-4xl sm:text-5xl">

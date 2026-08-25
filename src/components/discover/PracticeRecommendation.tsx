@@ -27,7 +27,7 @@ export function PracticeRecommendation({
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover opacity-20"
             />
-            <div className="relative mx-auto max-w-6xl px-6 py-28 md:py-36">
+            <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-24">
               <div className="grid gap-16 lg:grid-cols-[1.1fr_0.9fr]">
                 {/* Left column — story and structure */}
                 <motion.div
@@ -173,7 +173,7 @@ export function PracticeRecommendation({
             key="empty"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="mx-auto max-w-md px-6 py-24 text-center"
+            className="mx-auto max-w-md px-6 py-16 text-center"
           >
             <span className="rule-gold mx-auto block w-16" />
             <span className="mt-8 block font-display text-2xl italic text-foreground">

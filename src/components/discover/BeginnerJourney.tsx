@@ -28,7 +28,7 @@ const STEPS = [
 
 export function BeginnerJourney() {
   return (
-    <section className="bg-secondary/60 px-6 py-32 sm:py-44">
+    <section className="bg-secondary/60 px-6 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-xl">
           <p className="eyebrow text-accent-foreground/70">Beginner Journey</p>
