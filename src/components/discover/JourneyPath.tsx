@@ -20,7 +20,7 @@ const nodes = PATHS.map((path, i) => {
 
 export function JourneyPath() {
   return (
-    <section className="px-6 py-32 sm:py-44">
+    <section className="px-6 py-16 sm:py-20">
       <div className="mx-auto max-w-3xl text-center">
         <p className="eyebrow text-accent-foreground/70">The Journey Map</p>
         <h2 className="mt-6 text-4xl sm:text-5xl">
@@ -38,7 +38,7 @@ export function JourneyPath() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 1.6, ease }}
-        className="relative mx-auto mt-24 aspect-square w-full max-w-[560px]"
+        className="relative mx-auto mt-14 aspect-square w-full max-w-[560px]"
       >
         <svg viewBox="0 0 400 400" className="h-full w-full overflow-visible">
           <defs>
