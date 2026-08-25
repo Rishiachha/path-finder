@@ -12,9 +12,10 @@ export function PathSelector({
 }) {
   return (
     <section id="paths" className="px-4 pb-24 sm:px-8">
-      <div className="mx-auto flex max-w-[1400px] flex-col gap-3 lg:h-[76vh] lg:flex-row lg:gap-4">
+      <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-4 sm:grid-cols-2">
         {PATHS.map((path, i) => {
           const active = activeId === path.id;
+          const isLast = i === PATHS.length - 1;
           return (
             <motion.button
               key={path.id}
@@ -24,8 +25,11 @@ export function PathSelector({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 1.2, delay: i * 0.12, ease }}
-              animate={{ flexGrow: active ? 1.9 : 1 }}
-              className="group relative h-[58vh] w-full shrink-0 cursor-pointer overflow-hidden text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-gold lg:h-full lg:w-auto lg:flex-1 lg:basis-0 lg:shrink"
+              className={`group relative h-[260px] w-full cursor-pointer overflow-hidden text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-gold sm:h-[300px] ${
+                isLast
+                  ? "sm:col-span-2 sm:max-w-[calc(50%-0.5rem)] sm:justify-self-center"
+                  : ""
+              }`}
             >
               <img
                 src={path.image}
@@ -42,7 +46,7 @@ export function PathSelector({
                 }`}
               />
 
-              <div className="relative flex h-full flex-col justify-end p-7">
+              <div className="relative flex h-full flex-col justify-end p-6">
                 <span
                   className={`eyebrow transition-colors duration-700 ${
                     active ? "text-gold" : "text-primary-foreground/60"
@@ -50,14 +54,14 @@ export function PathSelector({
                 >
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="mt-4 max-w-[8ch] text-3xl leading-tight text-primary-foreground sm:text-4xl">
+                <h3 className="mt-3 max-w-[10ch] text-2xl leading-tight text-primary-foreground sm:text-3xl">
                   {path.title}
                 </h3>
-                <div className="mt-5 h-px w-10 bg-gold/80 transition-all duration-700 group-hover:w-20" />
-                <p className="mt-5 max-w-xs text-sm leading-relaxed text-primary-foreground/75 opacity-0 transition-opacity duration-700 group-hover:opacity-100 lg:opacity-0 max-lg:opacity-100">
+                <div className="mt-4 h-px w-10 bg-gold/80 transition-all duration-700 group-hover:w-16" />
+                <p className="mt-4 max-w-xs text-sm leading-relaxed text-primary-foreground/75 opacity-0 transition-opacity duration-700 group-hover:opacity-100 max-sm:opacity-100">
                   {path.line}
                 </p>
-                <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-1">
+                <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-1">
                   {path.seeking.map((s) => (
                     <li
                       key={s}
@@ -68,7 +72,7 @@ export function PathSelector({
                   ))}
                 </ul>
                 <span
-                  className={`eyebrow mt-7 inline-flex items-center gap-2 transition-colors duration-700 ${
+                  className={`eyebrow mt-5 inline-flex items-center gap-2 transition-colors duration-700 ${
                     active ? "text-gold" : "text-primary-foreground/70"
                   }`}
                 >
